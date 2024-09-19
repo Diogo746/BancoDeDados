@@ -31,3 +31,12 @@ VALUES ('Chocolate', 'Alimento', '4.99', '25'),
 ('Biscoito', 'Alimento', '2.55', '20'),
 ('Desodorante', 'Higiene', '15.99', '10'),
 ('Celular', 'Eletrônicos', '1099.00', '5');
+
+INSERT INTO cliente (nome, email, telefone)
+VALUES ('Antônio da Silva', 'antoniodasilva@mail.com', '99991111'),
+('Mariana ALmeida', 'marianaalmeida@mail.com', '99992222'),
+('Diego Pereira','diegopereira@mail.com', '99993333'),
+('Juliana Andrade', 'julianaandrade@mail.com', '99994444'),
+('Cristiane Ferreira', 'cristiane ferreira@mail.com', '99995555');
+
+
