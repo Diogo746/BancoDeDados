@@ -91,6 +91,11 @@ ORDER BY nome ASC;
 SELECT * FROM produtos
 ORDER BY nome DESC;
 
+-- Estoque atual de cada produto após as vendas
+
+-- Identificar os produtos mais vendidos
+
+-- Listar clientes que mais compraram
 
 
 
