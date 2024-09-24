@@ -45,16 +45,23 @@ INSERT INTO cliente (nome, email, telefone) VALUES
 ('Cristiane Ferreira', 'cristianeferreira@mail.com', '99995555');
 
 
-
-
-
-
-
-
 -- Registro de 10 vendas
 
 INSERT INTO vendas (id_produto, id_cliente, quantidade, data_venda)
-    VALUES (1 ,1 ,1 , CURDATE (2024-09-20); 
+    VALUES 
+    (1, 1, 1, '2024-09-12'),
+    (2, 3, 2, '2024-09-12'),
+    (1, 3, 6, '2024-09-12'),
+    (5, 4, 1, '2024-09-13'),
+    (3, 4, 2, '2024-09-13'),
+    (2, 4, 2, '2024-09-13'),
+    (2, 5, 4, '2024-09-15'),
+    (5, 2, 1, '2024-09-17'),
+    (1, 1, 1, '2024-09-17'),
+    (2, 1, 3, '2024-09-17'),
+    (4, 1, 1, '2024-09-17'),
+    (3, 3, 5, '2024-09-18');
+
 
 -- Atualização de dados: preço
 
@@ -65,23 +72,24 @@ WHERE id_produto = 1;
 -- Atualização de dados: telefone
 
 UPDATE cliente
-SET telefone = '88889999'
+SET telefone = '99998888'
 WHERE id_cliente = 3;
 
 -- Remoção de dados: produto
 
 DELETE FROM produtos
-WHERE id_produtos = 1;
+WHERE id_produto = 1;  xxxxxxxx
+
 
 -- Remoção de dados: cliente
 
 DELETE FROM clientes
-WHERE id_cliente = 4;
+WHERE id_cliente = 4;  xxxxxx
 
 -- Consulta categoria do produto
 
 SELECT * FROM produtos
-WHERE id_produtos = 5;
+WHERE id_produtos = 5;  xxxxxxx
 
 -- Consulta vendas realizadas em data especifica
 
@@ -104,4 +112,3 @@ ORDER BY nome DESC;
 -- Identificar os produtos mais vendidos
 
 -- Listar clientes que mais compraram
-
