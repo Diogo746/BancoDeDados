@@ -34,3 +34,11 @@ VALUES
 ('Marina Mendes','2020-04-18', 3210.00, 2),
 ('Marcos Cavalcanti','2019-05-12', 8080.00, 1),
 ('Juliana Barbosa','2023-01-28', 9100.00, 1);
+
+-- Usando where para retornar todos os empregados da tabela
+
+SELECT * FROM empregados
+WHERE data_admissao > 2013-03-01;
+
+SELECT * FROM  empregados
+WHERE data_admissao > '2022-01-01';
