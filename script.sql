@@ -42,3 +42,17 @@ WHERE data_admissao > 2013-03-01;
 
 SELECT * FROM  empregados
 WHERE data_admissao > '2022-01-01';
+
+SELECT * FROM empregados ORDER BY nome;
+
+SELECT * FROM empregados ORDER BY salario DESC;
+
+SELECT * FROM empregados ORDER BY salario ASC;
+
+SELECT * FROM empregados ORDER BY id_departamento, nome;
+
+SELECT * FROM empregados ORDER BY id DESC;
+
+SELECT * FROM empregados ORDER BY data_admissao DESC;
+
+ SELECT departamentos.nome FROM empregados, departamentos ORDER BY id_departamento DESC;
