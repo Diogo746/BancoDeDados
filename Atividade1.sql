@@ -9,22 +9,24 @@ CREATE TABLE produtos (
     nome VARCHAR(100),
     categoria VARCHAR(100),
     preco DECIMAL(10, 2),
-    estoque INT,
+    estoque INT
 );
 
 CREATE TABLE cliente (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100),
-    telefone VARCHAR(50),
+    telefone VARCHAR(50)
 );
 
 CREATE TABLE vendas (
     id_vendas INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INT FOREIGN KEY REFERENCES (id_produto),
-    id_cliente INT FOREIGN KEY REFERENCES (id_cliente),
+    id_produto INT,
+    id_cliente INT,
     quantidade INT,
-    data_venda (DATE),
+    data_venda DATE,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto),
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
 
 -- Inserção dos dados
@@ -96,7 +98,4 @@ ORDER BY nome DESC;
 -- Identificar os produtos mais vendidos
 
 -- Listar clientes que mais compraram
-
-
-
 
