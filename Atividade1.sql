@@ -89,7 +89,7 @@ WHERE id_cliente = 4;
 -- Consulta categoria do produto
 
 SELECT * FROM produtos
-WHERE id_produtos = 5; 
+WHERE id_produto = 5; 
 
 -- Consulta vendas realizadas em data especifica
 
