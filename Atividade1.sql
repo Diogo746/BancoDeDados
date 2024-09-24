@@ -78,7 +78,7 @@ WHERE id_cliente = 3;
 -- Remoção de dados: produto
 
 DELETE FROM produtos
-WHERE id_produto = 1;  xxxxxxxx
+WHERE id_produto = 1;
 
 
 -- Remoção de dados: cliente
@@ -93,9 +93,21 @@ WHERE id_produtos = 5;  xxxxxxx
 
 -- Consulta vendas realizadas em data especifica
 
+SELECT * FROM vendas WHERE data_venda = '2024-09-13'
+
 -- Consulta total de quantidade de vendas por produto
 
+SELECT id_produto, SUM(quantidade) AS total_vendas
+FROM vendas
+GROUP BY id_produto;
+
 -- Calculo da receita total por cliente
+
+SELECT c.id_cliente, c.nome, SUM(v.quantidade * p.preco) AS receita_total
+FROM vendas v
+JOIN produtos p ON v.id_produto = p.id_produto
+JOIN cliente c ON v.id_cliente = c.id_cliente
+GROUP BY c.id_cliente, c.nome;
 
 -- Ordenados por nome ascendente
 
@@ -109,6 +121,23 @@ ORDER BY nome DESC;
 
 -- Estoque atual de cada produto após as vendas
 
+SELECT p.id_produto, p.nome, p.estoque - COALESCE(SUM(v.quantidade), 0) AS estoque_atual
+FROM produtos p
+LEFT JOIN vendas v ON p.id_produto = v.id_produto
+GROUP BY p.id_produto, p.nome, p.estoque;
+
 -- Identificar os produtos mais vendidos
 
+SELECT p.id_produto, p.nome, SUM(v.quantidade) AS total_vendido
+FROM produtos p
+JOIN vendas v ON p.id_produto = v.id_produto
+GROUP BY p.id_produto, p.nome
+ORDER BY total_vendido DESC;
+
 -- Listar clientes que mais compraram
+
+SELECT c.id_cliente, c.nome, SUM(v.quantidade) AS total_comprado
+FROM cliente c
+JOIN vendas v ON c.id_cliente = v.id_cLiente
+GROUP BY c.id_cliente, c.nome
+ORDER BY total_comprado DESC;
