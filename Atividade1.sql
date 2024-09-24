@@ -1,9 +1,9 @@
--- Criação das tabelas
-
+-- Criação do esquema
 CREATE SCHEMA loja;
 
 USE loja;
 
+-- Criação das tabelas
 CREATE TABLE produtos (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
@@ -30,20 +30,26 @@ CREATE TABLE vendas (
 );
 
 -- Inserção dos dados
+INSERT INTO produtos (nome, categoria, preco, estoque) VALUES
+('Chocolate', 'Alimento', 4.99, 25),
+('Sabonete', 'Higiene', 1.89, 40),
+('Biscoito', 'Alimento', 2.55, 20),
+('Desodorante', 'Higiene', 15.99, 10),
+('Celular', 'Eletrônicos', 1099.00, 5);
 
-INSERT INTO produtos (nome, categoria, preco, estoque)
-VALUES ('Chocolate', 'Alimento', '4.99', '25'),
-('Sabonete', 'Higiene','1.89', '40'),
-('Biscoito', 'Alimento', '2.55', '20'),
-('Desodorante', 'Higiene', '15.99', '10'),
-('Celular', 'Eletrônicos', '1099.00', '5');
-
-INSERT INTO cliente (nome, email, telefone)
-VALUES ('Antônio da Silva', 'antoniodasilva@mail.com', '99991111'),
-('Mariana ALmeida', 'marianaalmeida@mail.com', '99992222'),
-('Diego Pereira','diegopereira@mail.com', '99993333'),
+INSERT INTO cliente (nome, email, telefone) VALUES
+('Antônio da Silva', 'antoniodasilva@mail.com', '99991111'),
+('Mariana Almeida', 'marianaalmeida@mail.com', '99992222'),
+('Diego Pereira', 'diegopereira@mail.com', '99993333'),
 ('Juliana Andrade', 'julianaandrade@mail.com', '99994444'),
 ('Cristiane Ferreira', 'cristianeferreira@mail.com', '99995555');
+
+
+
+
+
+
+
 
 -- Registro de 10 vendas
 
