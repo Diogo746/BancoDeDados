@@ -83,17 +83,17 @@ WHERE id_produto = 1;
 
 -- Remoção de dados: cliente
 
-DELETE FROM clientes
-WHERE id_cliente = 4;  xxxxxx
+DELETE FROM cliente
+WHERE id_cliente = 4;  XXXX
 
 -- Consulta categoria do produto
 
 SELECT * FROM produtos
-WHERE id_produtos = 5;  xxxxxxx
+WHERE id_produtos = 5;  XXXXXX
 
 -- Consulta vendas realizadas em data especifica
 
-SELECT * FROM vendas WHERE data_venda = '2024-09-13'
+SELECT * FROM vendas WHERE data_venda = '2024-09-13';
 
 -- Consulta total de quantidade de vendas por produto
 
