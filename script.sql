@@ -67,3 +67,10 @@ GROUP BY id_departamento;
  SELECT id_departamento, AVG (salario) AS salario_medio
  FROM empregados
  GROUP BY id_departamento;
+
+-- Salário máximo dos empregados
+ SELECT id_departamento, MAX(salario) AS maior_salario
+FROM empregados
+GROUP BY id_departamento;
+SELECT * FROM empregados;
+
