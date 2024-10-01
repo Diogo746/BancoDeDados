@@ -79,3 +79,24 @@ SELECT id_departamento, MIN(salario) AS menor_salario
 FROM empregados
 GROUP BY id_departamento;
 SELECT * FROM empregados;
+
+-- Número total de empregados
+
+SELECT COUNT(*) AS total_empregados
+FROM empregados;
+
+-- Média salarial geral
+SELECT id_departamento, AVG(salario) AS salario_medio
+FROM empregados;
+
+SELECT AVG(salario) AS media_salarial
+FROM empregados;
+
+-- Listar cada departamento com o total de salários pagos
+
+SELECT d.nome, SUM(e.salario) AS salarios_total
+FROM departamentos d
+JOIN empregados e ON e.id_departamento = d.id
+GROUP BY d.nome;
+
+
