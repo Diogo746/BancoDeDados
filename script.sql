@@ -62,3 +62,8 @@ SELECT * FROM empregados ORDER BY data_admissao DESC;
 SELECT id_departamento, COUNT(*) AS total
 FROM empregados
 GROUP BY id_departamento;
+
+ -- Média salarial dos empregados
+ SELECT id_departamento, AVG (salario) AS salario_medio
+ FROM empregados
+ GROUP BY id_departamento;
