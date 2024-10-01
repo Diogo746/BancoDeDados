@@ -74,3 +74,8 @@ FROM empregados
 GROUP BY id_departamento;
 SELECT * FROM empregados;
 
+-- Salário mínimo dos empregados
+SELECT id_departamento, MIN(salario) AS menor_salario
+FROM empregados
+GROUP BY id_departamento;
+SELECT * FROM empregados;
