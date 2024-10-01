@@ -56,3 +56,9 @@ SELECT * FROM empregados ORDER BY id DESC;
 SELECT * FROM empregados ORDER BY data_admissao DESC;
 
  SELECT departamentos.nome FROM empregados, departamentos ORDER BY id_departamento DESC;
+
+
+
+SELECT id_departamento, COUNT(*) AS total
+FROM empregados
+GROUP BY id_departamento;
