@@ -68,5 +68,35 @@ SELECT AVG(quantidade) AS produtos_media
 FROM vendas
 GROUP BY categoria;
 
+-- Menor preço por unidade vendida
 
--- 
+SELECT MIN(preco_unidade) AS menor_preco_unidade
+FROM vendas;
+
+-- Maior preço por unidade vendida
+
+SELECT MAX(preco_unidade) AS maior_preco_unidade
+FROM vendas;
+
+-- Menor quantidade de produtos vendidos em uma venda
+
+SELECT MIN(quantidade) AS menor_quantidade_vendida
+FROM vendas;
+
+-- Maior quantidade de produtos vendidos em uma venda
+
+SELECT MAX(quantidade) AS maior_quantidade_vendida
+FROM vendas;
+
+
+-- Maior valor total de uma venda
+
+SELECT MAX(quantidade * preco_unidade) AS maior_valor_venda
+FROM vendas;
+
+
+-- Média de valor das vendas realizadas em Higiene
+
+SELECT AVG(quantidade * preco_unidade) AS media_valor_higiene
+FROM vendas
+WHERE categoria = 'Higiene';
