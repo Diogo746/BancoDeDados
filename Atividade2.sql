@@ -37,7 +37,7 @@ FROM vendas;
 SELECT AVG(preco_unidade) AS preco_medio
 FROM vendas;
 
--- Quantidade média vendidos
+-- Quantidade média vendida
 
 SELECT AVG(quantidade) AS produtos_media
 FROM vendas;
