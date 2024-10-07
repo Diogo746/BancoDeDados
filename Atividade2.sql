@@ -1,8 +1,3 @@
--- Criação da tabela
-
-CREATE SCHEMA supermercado;
-
-USE supermercado;
 
 CREATE TABLE vendas(
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -12,8 +7,6 @@ quantidade INT,
 preco_unidade DEC(10, 2),
 data_venda DATE
 );
-
--- Inserir os produtos
 
 INSERT INTO vendas (produto, categoria, quantidade, preco_unidade, data_venda)
 VALUES
@@ -34,25 +27,12 @@ SELECT COUNT(*) AS total_vendas_alimentos
 FROM vendas
 WHERE categoria = 'Alimentos';
 
-SELECT SUM(quantidade) AS total_vendas_alimentos
-FROM vendas
-WHERE categoria = 'Alimentos';
-
-SELECT SUM(quantidade * preco_unidade) AS total_vendas_alimentos
-FROM vendas
-WHERE categoria = 'Alimentos';
-
 
 -- Vendas realizadas no total
 
 SELECT COUNT(*) AS vendas_total
 FROM vendas;
 
-SELECT SUM(quantidade) AS total_vendas
-FROM vendas;
-
-SELECT SUM(quantidade * preco_unidade) AS total_vendas
-FROM vendas;
 
 -- Preço médio por unidade dos produtos vendidos
 
