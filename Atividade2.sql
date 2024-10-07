@@ -21,61 +21,53 @@ VALUES
 ('Shampoo','Higiene',1,15.00,'2024-09-05'),
 ('Creme dental','Higiene',3,8.00,'2024-09-06');
 
--- Vendas realizadas na categoria alimentos
+-- Vendas alimentos
 
 SELECT COUNT(*) AS total_vendas_alimentos
 FROM vendas
 WHERE categoria = 'Alimentos';
 
-
--- Vendas realizadas no total
+-- Vendas total
 
 SELECT COUNT(*) AS vendas_total
 FROM vendas;
 
-
--- Preço médio por unidade dos produtos vendidos
+-- Preço médio por unidade
 
 SELECT AVG(preco_unidade) AS preco_medio
 FROM vendas;
 
--- Quantidade média de produtos vendidos
+-- Quantidade média vendidos
 
 SELECT AVG(quantidade) AS produtos_media
 FROM vendas;
 
-SELECT AVG(quantidade) AS produtos_media
-FROM vendas
-GROUP BY categoria;
-
--- Menor preço por unidade vendida
+-- Menor preço 
 
 SELECT MIN(preco_unidade) AS menor_preco_unidade
 FROM vendas;
 
--- Maior preço por unidade vendida
+-- Maior preço 
 
 SELECT MAX(preco_unidade) AS maior_preco_unidade
 FROM vendas;
 
--- Menor quantidade de produtos vendidos em uma venda
+-- Menor quantidade vendida
 
 SELECT MIN(quantidade) AS menor_quantidade_vendida
 FROM vendas;
 
--- Maior quantidade de produtos vendidos em uma venda
+-- Maior quantidade vendida
 
 SELECT MAX(quantidade) AS maior_quantidade_vendida
 FROM vendas;
 
-
--- Maior valor total de uma venda
+-- Maior valor venda
 
 SELECT MAX(quantidade * preco_unidade) AS maior_valor_venda
 FROM vendas;
 
-
--- Média de valor das vendas realizadas em Higiene
+-- Média de valor venda
 
 SELECT AVG(quantidade * preco_unidade) AS media_valor_higiene
 FROM vendas
