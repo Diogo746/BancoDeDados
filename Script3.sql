@@ -1,3 +1,6 @@
+//criar tabela autor e retirar ele da tabela livro
+
+
 CREATE SCHEMA Biblioteca;
 
 USE Biblioteca;
